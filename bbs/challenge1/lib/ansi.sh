@@ -1,4 +1,4 @@
-#!/usr/bin/exec-suid -- /bin/bash
+#!/opt/pwn.college/bash
 
 if [ -t 1 ]; then
   C_RST='\033[0m'

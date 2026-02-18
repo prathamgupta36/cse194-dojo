@@ -1,4 +1,4 @@
-#!/usr/bin/exec-suid -- /bin/bash
+#!/opt/pwn.college/bash
 set -euo pipefail
 
 cd /challenge
