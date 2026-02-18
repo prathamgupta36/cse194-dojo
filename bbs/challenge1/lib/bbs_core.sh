@@ -13,6 +13,16 @@ load_expected_hash() {
   tr -d '[:space:]' <"$path"
 }
 
+load_runtime_flag_hash() {
+  local runtime_flag
+  if [ ! -r /flag ]; then
+    return 1
+  fi
+
+  IFS= read -r runtime_flag </flag || return 1
+  hash_text "$runtime_flag"
+}
+
 submit_flag() {
   local guess="$1"
   local expected_hash="$2"
@@ -32,11 +42,13 @@ submit_flag() {
 }
 
 unlock_flag_file() {
-  local flag_value="$1"
-  printf '%s\n' "$flag_value" >/flag
   show_module_bar "Flag Unlocked"
-  printf '%b' "${C_GRN}/flag is now available:${C_RST}\n"
-  cat /flag
+  if [ -r /flag ]; then
+    printf '%b' "${C_GRN}/flag is available:${C_RST}\n"
+    cat /flag
+  else
+    printf '%b' "${C_GRN}Correct. No runtime /flag is available in this environment.${C_RST}\n"
+  fi
 }
 
 decode_rot13() {

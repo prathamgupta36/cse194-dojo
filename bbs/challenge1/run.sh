@@ -5,7 +5,12 @@ cd /challenge
 source ./lib/ansi.sh
 source ./lib/bbs_core.sh
 
-expected_hash="$(load_expected_hash ./meta/flag.sha256)"
+if expected_hash="$(load_runtime_flag_hash)"; then
+  :
+else
+  expected_hash="$(load_expected_hash ./meta/flag.sha256)"
+fi
+
 solved=0
 
 mail_subjects=(
@@ -164,7 +169,7 @@ submit_terminal() {
   read_choice guess || { printf '\n'; return; }
 
   if submit_flag "$guess" "$expected_hash"; then
-    unlock_flag_file "$guess"
+    unlock_flag_file
     solved=1
   fi
 
