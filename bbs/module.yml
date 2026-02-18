@@ -4,3 +4,12 @@ challenges:
   - id: challenge1
     name: BBS Login
     image: prathamgupta36/cse194-bbs-challenge1:0.4
+  - id: challenge2
+    name: The Phreaker's Trail
+    image: prathamgupta36/cse194-bbs-challenge1:0.4
+  - id: challenge3
+    name: Door Game Backdoor
+    image: prathamgupta36/cse194-bbs-challenge1:0.4
+  - id: challenge4
+    name: Midnight Crash
+    image: prathamgupta36/cse194-bbs-challenge1:0.4

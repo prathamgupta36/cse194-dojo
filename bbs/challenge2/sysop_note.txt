@@ -1,0 +1,2 @@
+SYSOP NOTE:
+Curfew starts at 23:00. Any 2600 Hz event after curfew is suspicious.

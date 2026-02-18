@@ -1,0 +1,6 @@
+[Sysop Bulletin]
+
+Door maintenance note:
+- Galactic Trade was rushed into production.
+- Audit says user input is "evaluated" for custom greetings.
+- That should make you nervous.

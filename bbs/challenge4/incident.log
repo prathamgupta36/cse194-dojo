@@ -1,0 +1,5 @@
+[00:11] WARN  line-noise spike detected on trunk-3
+[00:12] INFO  emergency archive written to ./stash/
+[00:13] INFO  message spool partially corrupted
+[00:14] ALERT unauthorized sysop command replayed
+[00:15] INFO  recovery fragments left for morning class
