@@ -33,9 +33,7 @@ submit_flag() {
 
 unlock_flag_file() {
   local flag_value="$1"
-  chmod 600 /flag
   printf '%s\n' "$flag_value" >/flag
-  chmod 444 /flag
   show_module_bar "Flag Unlocked"
   printf '%b' "${C_GRN}/flag is now available:${C_RST}\n"
   cat /flag
