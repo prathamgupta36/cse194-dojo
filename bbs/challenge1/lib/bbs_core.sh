@@ -13,16 +13,6 @@ load_expected_hash() {
   tr -d '[:space:]' <"$path"
 }
 
-load_runtime_flag_hash() {
-  local runtime_flag
-  if [ ! -r /flag ]; then
-    return 1
-  fi
-
-  IFS= read -r runtime_flag </flag || return 1
-  hash_text "$runtime_flag"
-}
-
 submit_flag() {
   local guess="$1"
   local expected_hash="$2"

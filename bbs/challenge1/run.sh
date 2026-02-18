@@ -5,12 +5,7 @@ cd /challenge
 source ./lib/ansi.sh
 source ./lib/bbs_core.sh
 
-if expected_hash="$(load_runtime_flag_hash)"; then
-  :
-else
-  expected_hash="$(load_expected_hash ./meta/flag.sha256)"
-fi
-
+expected_hash="$(load_expected_hash ./meta/flag.sha256)"
 solved=0
 
 mail_subjects=(
