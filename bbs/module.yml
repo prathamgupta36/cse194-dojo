@@ -2,7 +2,7 @@ id: bbs
 name: BBS Fun
 challenges:
   - id: challenge1
-    name: BBS Login
+    name: First Login, New User
     image: prathamgupta36/cse194-bbs-challenge1:0.4
   - id: challenge2
     name: The Phreaker's Trail
