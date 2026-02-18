@@ -3,4 +3,4 @@ name: BBS Fun
 challenges:
   - id: challenge1
     name: BBS Login
-    image: prathamgupta36/cse194-bbs-challenge1:0.3
+    image: prathamgupta36/cse194-bbs-challenge1:0.4
