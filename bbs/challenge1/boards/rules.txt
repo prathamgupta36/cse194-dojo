@@ -1,0 +1,5 @@
+[Board Rules]
+
+1) Be respectful.
+2) No password sharing.
+3) If text looks scrambled, maybe it's old-school ROT13.

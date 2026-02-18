@@ -1,0 +1,6 @@
+id: bbs
+name: BBS Fun
+challenges:
+  - id: challenge1
+    name: BBS Login
+    image: prathamgupta36/cse194-bbs-challenge1

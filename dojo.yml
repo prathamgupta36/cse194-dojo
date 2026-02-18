@@ -1,0 +1,5 @@
+id: cse194
+name: CSE-194 Dojo
+type: hidden
+modules:
+  - id: bbs
