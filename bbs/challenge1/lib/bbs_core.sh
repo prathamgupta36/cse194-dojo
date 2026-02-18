@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/exec-suid -- /bin/bash
 
 hash_text() {
   printf '%s' "$1" | sha256sum | awk '{print $1}'

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/exec-suid -- /bin/bash
 
 if [ -t 1 ]; then
   C_RST='\033[0m'
