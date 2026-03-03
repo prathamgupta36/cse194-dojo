@@ -4,5 +4,3 @@ type: hidden
 modules:
   - id: bbs
   - id: irc
-  visibility: 
-      start: "2026-03-05T10:30:00-07:00"

@@ -2,16 +2,28 @@ name: Introduction to IRC Servers
 challenges:
   - id: join
     name: Join an IRC Server
+    visibility: 
+      start: "2026-03-05T10:30:00-07:00"
   - id: join2
     name: Join an IRC Server (with an IRC Client)
+    visibility: 
+      start: "2026-03-05T10:30:00-07:00"
   - id: nick
     name: Change your nickname
+    visibility: 
+      start: "2026-03-05T10:30:00-07:00"
   - id: channel
     name: Join a channel
+    visibility: 
+      start: "2026-03-05T10:30:00-07:00"
   - id: msg
     name: Message a channel
+    visibility: 
+      start: "2026-03-05T10:30:00-07:00"
   - id: attack
     name: Remove another user
+    visibility: 
+      start: "2026-03-05T10:30:00-07:00"
 resources:
   - name: "IRC Servers"
     type: lecture
