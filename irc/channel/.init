@@ -1,0 +1,3 @@
+#!/bin/bash
+(cd /challenge/sic-1.3 && sudo make && sudo make install)
+/challenge/server & 
