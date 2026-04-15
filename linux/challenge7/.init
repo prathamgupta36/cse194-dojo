@@ -1,29 +1,29 @@
 #!/bin/bash
 
-cd /challenge
+# cd /challenge
 
-mkdir -p links sanctuary
+# mkdir -p links sanctuary
 
-cat > sanctuary/.apse_note <<'EOF'
-ANSWER=ROSETTA
-The cathedral keeps only one honest path.
-EOF
+# cat > sanctuary/.apse_note <<'EOF'
+# ANSWER=ROSETTA
+# The cathedral keeps only one honest path.
+# EOF
 
-for n in $(seq 1 23); do
-current=$(printf "step%02d" "$n")
-next=$(printf "step%02d" $((n + 1)))
-ln -sfn "$next" "links/$current"
-done
-ln -sfn ../sanctuary/.apse_note links/step24
+# for n in $(seq 1 23); do
+# current=$(printf "step%02d" "$n")
+# next=$(printf "step%02d" $((n + 1)))
+# ln -sfn "$next" "links/$current"
+# done
+# ln -sfn ../sanctuary/.apse_note links/step24
 
-ln -sfn ghost02 links/ghost01
-ln -sfn ghost03 links/ghost02
-ln -sfn ../missing_note.txt links/ghost03
+# ln -sfn ghost02 links/ghost01
+# ln -sfn ghost03 links/ghost02
+# ln -sfn ../missing_note.txt links/ghost03
 
-ln -sfn loop_b links/loop_a
-ln -sfn loop_c links/loop_b
-ln -sfn loop_a links/loop_c
+# ln -sfn loop_b links/loop_a
+# ln -sfn loop_c links/loop_b
+# ln -sfn loop_a links/loop_c
 
-ln -sfn links/step01 entryway
-ln -sfn links/ghost01 broken_arch
-ln -sfn links/loop_a ouroboros
+# ln -sfn links/step01 entryway
+# ln -sfn links/ghost01 broken_arch
+# ln -sfn links/loop_a ouroboros
