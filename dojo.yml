@@ -4,3 +4,4 @@ type: hidden
 modules:
   - id: bbs
   - id: irc
+  - id: linux
