@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/opt/pwn.college/bash
 set -euo pipefail
 
 if [[ "$#" -ne 1 ]]; then

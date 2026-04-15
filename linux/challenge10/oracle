@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/opt/pwn.college/bash
 echo "No useful signal on stdout."
 echo "The wire crackles..." >&2
 echo "ANSWER=WHISPERWIRE" >&2

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/opt/pwn.college/bash
 set -euo pipefail
 
 normalize(){ printf '%s' "$1" | tr '[:lower:]' '[:upper:]'; }
