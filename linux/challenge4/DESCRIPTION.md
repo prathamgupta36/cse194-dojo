@@ -7,6 +7,8 @@ Instead of browsing by hand, ask the filesystem to locate the exact file you car
 **Your task:**
 Locate the text file somewhere under this directory tree, recover the answer inside it, and verify it with:
 
+*Hint* - Use the find command to locate any text files in the `/challenge` directory.
+
 ```bash
 ./submit ANSWER
 ```

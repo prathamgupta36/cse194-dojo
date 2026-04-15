@@ -7,7 +7,9 @@ The slow solve is to trace the links by hand with listings.
 The elegant solve is to let Linux resolve the path for you.
 
 **Your task:**
-Start from `entryway`, determine which chain resolves to a real note, recover the answer at the end of the real chain, and verify it with:
+Start from anywhere you want, determine which chain resolves to a real note, recover the answer at the end of the real chain, and verify it with:
+
+*Hint* - See how to follow links in linux.
 
 ```bash
 ./submit ANSWER
