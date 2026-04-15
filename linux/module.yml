@@ -4,28 +4,16 @@ name: Linux
 challenges:
   - id: challenge1
     name: Phantom Dotfiles
-    visibility: 
-      start: "2026-04-16T15:30:00-07:00"
   - id: challenge2
     name: Modem Maze
-    visibility: 
-      start: "2026-04-16T15:30:00-07:00"
   - id: challenge3
     name: Midnight Log Slice
-    visibility: 
-      start: "2026-04-16T15:30:00-07:00"
   - id: challenge4
     name: Dumpster Oracle
-    visibility: 
-      start: "2026-04-16T15:30:00-07:00"
   - id: challenge5
     name: Fake JPEG
-    visibility: 
-      start: "2026-04-16T15:30:00-07:00"
   - id: challenge6
     name: Dead Drop Archive
-    visibility: 
-      start: "2026-04-16T15:30:00-07:00"
   - id: challenge7
     name: Symlink Cathedral
     visibility: 
