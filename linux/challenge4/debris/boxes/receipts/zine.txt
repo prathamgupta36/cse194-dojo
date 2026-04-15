@@ -1,0 +1,2 @@
+ANSWER=PHRACK
+Sometimes archaeology is just recursive search.

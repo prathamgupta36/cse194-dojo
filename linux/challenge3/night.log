@@ -1,0 +1,7 @@
+[23:01] BOOT monitor live
+[23:05] WARN failed auth for northbridge
+[23:08] AUTH OK user=echofox answer=SPARK
+[23:13] INFO line noise stabilised
+[23:21] AUTH OK user=modemmage answer=STATIC
+[23:29] WARN failed auth for atlas
+[23:44] AUTH OK user=nighthawk answer=NIGHTHAWK

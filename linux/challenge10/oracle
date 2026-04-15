@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+echo "No useful signal on stdout."
+echo "The wire crackles..." >&2
+echo "ANSWER=WHISPERWIRE" >&2
+echo "Connection lost." >&2
+exit 1

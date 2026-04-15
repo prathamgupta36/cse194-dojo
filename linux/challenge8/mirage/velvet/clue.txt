@@ -1,0 +1,2 @@
+ANSWER=AURORA
+Permissions are not decoration.

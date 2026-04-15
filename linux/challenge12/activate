@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export PATH="$(pwd)/bin:$PATH"
+echo "Night-shift shell primed. A new command should now exist on your PATH."

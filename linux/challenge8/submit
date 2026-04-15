@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+normalize(){ printf '%s' "$1" | tr '[:lower:]' '[:upper:]'; }
+digest(){
+  if command -v sha256sum >/dev/null 2>&1; then
+    printf '%s' "$1" | sha256sum | awk '{print $1}'
+  else
+    printf '%s' "$1" | shasum -a 256 | awk '{print $1}'
+  fi
+}
+get_flag(){
+  case "${DEBUG:-0}" in
+    1|true|TRUE|on|ON) printf '%s\n' 'flag{challenge8_permission_mirage_debug}' ;;
+    *) [[ -r /flag ]] && cat /flag || { echo "Release mode is enabled but /flag is not readable." >&2; exit 1; } ;;
+  esac
+}
+expected_hash='1e28b2651a6d1b2486987925a85576dce1f8713e46acab058d9b200e409e4887'
+[[ "$#" -eq 1 ]] || { echo "Usage: $0 ANSWER" >&2; exit 1; }
+provided="$(normalize "$1")"
+[[ "$(digest "$provided")" == "$expected_hash" ]] || { echo "Incorrect answer." >&2; exit 1; }
+echo "Correct."
+get_flag

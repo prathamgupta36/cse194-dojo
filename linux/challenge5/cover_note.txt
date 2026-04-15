@@ -1,0 +1,2 @@
+This file looks like art.
+The terminal may disagree.

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+normalize(){
+  printf '%s' "$*" | tr '[:lower:]' '[:upper:]' | sed -E 's/[[:space:]]+/ /g; s/^ //; s/ $//'
+}
+digest(){
+  if command -v sha256sum >/dev/null 2>&1; then
+    printf '%s' "$1" | sha256sum | awk '{print $1}'
+  else
+    printf '%s' "$1" | shasum -a 256 | awk '{print $1}'
+  fi
+}
+get_flag(){
+  case "${DEBUG:-0}" in
+    1|true|TRUE|on|ON) printf '%s\n' 'flag{challenge12_path_of_the_night_watch_debug}' ;;
+    *) [[ -r /flag ]] && cat /flag || { echo "Release mode is enabled but /flag is not readable." >&2; exit 1; } ;;
+  esac
+}
+
+expected_hash='3328e44fd342644d2eaf8fbca55af0595ed80aea5c17fa3664a637282ecf5ee8'
+[[ "$#" -eq 3 ]] || { echo "Usage: $0 WORD1 WORD2 WORD3" >&2; exit 1; }
+
+provided="$(normalize "$*")"
+[[ "$(digest "$provided")" == "$expected_hash" ]] || { echo "The watch is not restored. Recheck the clue words and their order." >&2; exit 1; }
+
+echo "Night watch restored."
+get_flag

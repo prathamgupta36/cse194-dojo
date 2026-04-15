@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+normalize(){ printf '%s' "$1" | tr '[:lower:]' '[:upper:]'; }
+digest(){
+  if command -v sha256sum >/dev/null 2>&1; then
+    printf '%s' "$1" | sha256sum | awk '{print $1}'
+  else
+    printf '%s' "$1" | shasum -a 256 | awk '{print $1}'
+  fi
+}
+get_flag(){
+  case "${DEBUG:-0}" in
+    1|true|TRUE|on|ON) printf '%s\n' 'flag{challenge5_fake_jpeg_debug}' ;;
+    *) [[ -r /flag ]] && cat /flag || { echo "Release mode is enabled but /flag is not readable." >&2; exit 1; } ;;
+  esac
+}
+expected_hash='0c08e8653bf047b8993afdc358fd3856a70ef5fb9d7113d469a13ae69f223f8d'
+[[ "$#" -eq 1 ]] || { echo "Usage: $0 ANSWER" >&2; exit 1; }
+provided="$(normalize "$1")"
+[[ "$(digest "$provided")" == "$expected_hash" ]] || { echo "Incorrect answer." >&2; exit 1; }
+echo "Correct."
+get_flag
