@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir /challenge/archive
+mkdir /challenge/cache
+mkdir /challenge/rooms
+mkdir /challenge/rooms/east
+mkdir /challenge/rooms/west
