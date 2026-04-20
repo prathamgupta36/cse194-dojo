@@ -16,25 +16,13 @@ challenges:
     name: Dead Drop Archive
   - id: challenge7
     name: Symlink Cathedral
-    visibility: 
-      start: "2027-04-16T15:30:00-07:00"
   - id: challenge8
     name: Permission Mirage
-    visibility: 
-      start: "2027-04-16T15:30:00-07:00"
   - id: challenge9
     name: Inode Twins
-    visibility: 
-      start: "2027-04-16T15:30:00-07:00"
   - id: challenge10
     name: stderr Seance
-    visibility: 
-      start: "2027-04-16T15:30:00-07:00"
   - id: challenge11
     name: Timestamp Forensics
-    visibility: 
-      start: "2027-04-16T15:30:00-07:00"
   - id: challenge12
     name: PATH of the Night Watch
-    visibility: 
-      start: "2027-04-16T15:30:00-07:00"
