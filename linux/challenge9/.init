@@ -5,3 +5,14 @@ mkdir /challenge/cache
 mkdir /challenge/rooms
 mkdir /challenge/rooms/east
 mkdir /challenge/rooms/west
+
+dest_dir="/challenge"
+
+rm -f "$dest_dir/archive/ledger.txt" "$dest_dir/cache/receipt.txt" "$dest_dir/rooms/east/pamphlet.txt"
+ln "$dest_dir/.master_copy" "$dest_dir/archive/ledger.txt"
+ln "$dest_dir/.master_copy" "$dest_dir/cache/receipt.txt"
+ln "$dest_dir/.master_copy" "$dest_dir/rooms/east/pamphlet.txt"
+
+printf '%s\n' 'just a normal file' > "$dest_dir/rooms/west/decoy.txt"
+
+rm /challenge/.init
